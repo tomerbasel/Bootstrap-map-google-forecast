@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Forecast</title>
+     
+      <!--JQUERY-->
+              <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <!--JQUERY-->
+
+       <!--Javascript-->
+              <script src="js/script.js"></script>
+      <!--Javascript-->
+
+      <!--CSS-->
+            <link rel="stylesheet"  href="css/bootstrap.min.css">
+            <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+      <!--CSS-->
+
+     
+
+      <!--Google map-->
+                  <style type="text/css">
+                  html, body, { height: 100%; margin: 0; padding: 0;}
+                </style>
+                <script type="text/javascript"
+                  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2AsnwxuDbTRirG1rJXqDSxCjp_kklLpg">
+                </script>
+                <script type="text/javascript">
+                  function initialize() {
+                    var mapOptions = {
+                      center: { lat: -34.397, lng: 150.644},
+                      zoom: 8
+                    };
+                    var map = new google.maps.Map(document.getElementById('map-canvas'),
+                        mapOptions);
+                  }
+                  google.maps.event.addDomListener(window, 'load', initialize);
+                </script>
+      <!--Google map-->
+
+
+
+</head>
+<body>
+<div id="map-canvas"></div>
+    <p><b>Your Forcast</b></p>  
+
+  
+      
+          <div class="content" id='contentdata'>
+            <input type= "text" id="text">
+            <button class= 'btn btn-primary'>send</button><br>
+
+        <table>
+          <tr>
+            <td>country</td>
+            <td><span id="result1"></span></td>    
+          </tr>
+          <tr>
+            <td>lon</td>
+            <td><span id="result2"></span></td>    
+          </tr>
+          <tr>
+            <td>lat</td>
+            <td><span id="result3"></span></td>    
+          </tr> 
+          <tr>
+            <td>humidity</td>
+            <td><span id="result4"></span></td>    
+          </tr> <tr>
+            <td>wind speed</td>
+            <td><span id="result5"></span></td>    
+          </tr>
+        </div>
+
+        
+ 
+      <!---Bootstrap JS-->
+            <script src="js/bootstrap.min.js"></script>
+      <!---Bootstrap JS-->
+
+</body>
+</html>
