@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Forecast</title>
+     
+     
+      <!--JQUERY-->
+              <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <!--JQUERY-->
+      <!--Javascript-->
+              <script src="js/script.js"></script>
+      <!--Javascript-->
+
+      <!--CSS-->
+            <link rel="stylesheet"  href="css/bootstrap.min.css">
+            <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+      <!--CSS-->
+
+      <!--Google map-->
+                  <style type="text/css">
+                  html, body, { height: 100%; margin: 0; padding: 0;}
+                </style>
+          <script type="text/javascript"
+                  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2AsnwxuDbTRirG1rJXqDSxCjp_kklLpg">
+          </script>
+          <script type="text/javascript">
+                  function initialize() {
+                    var mapOptions = {
+                      center: { lat: -34.397, lng: 150.644},
+                      zoom: 8
+                    };
+                    var map = new google.maps.Map(document.getElementById('map-canvas'),
+                        mapOptions);
+                  }
+                  google.maps.event.addDomListener(window, 'load', initialize);
+         </script>
+      <!--Google map-->
+
+
+
+</head>
+<body>
+
+ <!--google map--> 
+  <div id="map-canvas"></div>
+      <p><b>My Shop</b></p>  
+
+
+<!--Main catagory-->
+        <div class=content>
+             <h3>Choose your catagory</h3>
+      <select  id= "catagoryMenu">
+        <option class="select1"value="000"></option>
+        <option class="select1"value="001">Books</option>
+        <option class="select1"value="002">Sport</option>
+        <option class="select1"value="003">Games</option>
+        <option class="select1"value="004">Garden</option> <br> 
+      </select><br>
+
+        </div>
+<!--Main catagory end-->   
+
+
+
+<!--Sub catagory Menu-->
+      <div class=content id="subCatagoryMenu" style="display:none;">
+         <h3>Choose your sub catagory</h3>
+        <select >
+              <option class="select1"value="000"></option>
+              <option class="select1"value="001">sub1</option>
+              <option class="select1"value="002">sub2</option>
+              <option class="select1"value="003">sub3</option>
+              <option class="select1"value="004">sub4</option> <br> 
+        </select><br>
+
+      </div>
+ <!--Sub catagory Menu end-->
+    
+
+
+<!--youtube-->
+      <div class=content id="youtube">
+
+            <div class=screenSize id="screen1"></div>
+            <div class=screenSize id="screen2"></div>
+            <div class=screenSize id="screen3"></div>
+
+      </div>
+        <div class=content></div>
+
+<!--youtube end-->
+      
+
+        
+
+    
+      
+      <!---Bootstrap JS-->
+            <script src="js/bootstrap.min.js"></script>
+      <!---Bootstrap JS-->
+
+</body>
+</html>
