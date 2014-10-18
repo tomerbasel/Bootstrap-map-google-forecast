@@ -1,14 +1,10 @@
 $(document).ready(function(){
-  ////Click
 
- // $("#subCatagoryMenu").hide();
-
-
-  $("buttonSend").click(function(){
-          ///Get element of text box
+  $("button").click(function(){
+//////////Get element of text box
             var city = $('#text').val();
             alert( "You choose"+" "+city );
-          ////GET
+////////////GET 
         $.ajax({
                 url: "http://api.openweathermap.org/data/2.5/weather?q="+city,
                 type: 'GET',
@@ -23,12 +19,24 @@ $(document).ready(function(){
                 }
               });
             
-     }); 
+    }); 
+/////catagory Menu select event//////
+              $("#catagoryMenu").change(function(){
+              $("#textSubCategory").text("Choose your sub catagory" + " on-" + $("#catagoryMenu").val());
+                 $("#subCatagoryMenu").hide();
+                $("#subCatagoryMenu").show(1000);
+              });
 
-  $("#catagoryMenu").change(function(){
+/////Sub catagory Menu select event//////
 
-     $("#subCatagoryMenu").show(1000);
-  });
+            $("#subCatagoryMenu").change(function(){
+              $("#textSubCategory").val="Choose your sub catagory" + "on-" + $("#catagoryMenu").val;
+                 $("#youtube").show(1000);
+              });
+
+/////youtube //////////
+
+
 
 
 
