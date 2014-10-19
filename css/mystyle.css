@@ -36,9 +36,17 @@ p{
 	margin-top: 100px;
 }
 
-.youtube{
-	width: 250px;
-	height: 250px;
-	background-color: blue;
+.screenSize{
+
+	margin-left: 35px;
+	float: left;
+	margin-top: 20px;
+	width: 200px;
+	height: 150px;
+	background-color: #CC66FF;
 	border-radius: 15px;
+
 }
+
+
+

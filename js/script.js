@@ -23,15 +23,16 @@ $(document).ready(function(){
 /////catagory Menu select event//////
               $("#catagoryMenu").change(function(){
               $("#textSubCategory").text("Choose your sub catagory" + " on-" + $("#catagoryMenu").val());
-                 $("#subCatagoryMenu").hide();
-                $("#subCatagoryMenu").show(1000);
+              $("#subCatagoryMenu").hide();
+              $("#subCatagoryMenu").show(1000);
+              $('#subCatagoryMenu').val('');
               });
 
 /////Sub catagory Menu select event//////
 
             $("#subCatagoryMenu").change(function(){
-              $("#textSubCategory").val="Choose your sub catagory" + "on-" + $("#catagoryMenu").val;
-                 $("#youtube").show(1000);
+              $("#youtube").hide();
+              $("#youtube").show(1000);
               });
 
 /////youtube //////////
